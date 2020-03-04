@@ -20,6 +20,7 @@ namespace ProgressSampleApp.Controllers
     public IActionResult Index(int year = 1980)
     {
 
+            var i = 0;
       var years = Repository.GetAvailableYears().Select(y => new SelectListItem { Text = y.ToString() });
       ViewBag.Years = years;
       ViewBag.SelectedYear = year;
